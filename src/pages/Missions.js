@@ -1,5 +1,7 @@
+import Mission from '../components/Mission';
+
 const Missions = () => (
-  <div className="container"><h2>Missions Page</h2></div>
+  <Mission />
 );
 
 export default Missions;
