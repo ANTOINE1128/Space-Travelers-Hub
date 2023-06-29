@@ -1,19 +1,35 @@
-import image from '../falcon.jpg';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchRockets } from '../redux/features/Rockets/RocketSlice';
+import Rocket from '../components/Rocket';
 
 const Rockets = () => {
-  const style = {
-    width: 200,
-  };
+  const rockets = useSelector((store) => store.rockets);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchRockets());
+  }, [dispatch]);
   return (
     <div className="container">
-      <div className=" d-flex-space g-10 my-20">
-        <img src={image} width={style.width} alt="rocket" />
-        <div className="rocket-details">
-          <h2 className="rocket-name">Falcon 1</h2>
-          <p className="rocket-desc">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <button type="button" className="rocket-reserve btn">Reserve Rocket</button>
+      {rockets.loading && <div>loading</div>}
+      {!rockets.loading && rockets.error ? (
+        <div>
+          Error
+          {rockets.error}
         </div>
-      </div>
+      ) : null}
+      {!rockets.loading && rockets.rocket.length ? (
+        rockets.rocket.map((rocket) => (
+          <Rocket
+            key={rocket.id}
+            name={rocket.name}
+            img={rocket.flickr_images}
+            id={rocket.id}
+            desc={rocket.description}
+            reserved={rocket.reserved}
+          />
+        ))
+      ) : null}
     </div>
   );
 };
