@@ -1,3 +1,4 @@
+
 h2 {
   font-size: 2.5rem;
 }
@@ -13,4 +14,13 @@ h2 {
   height: 10vh;
   border: 1px solid rgb(221, 217, 217);
   font-size: 2rem;
+.profile-section {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-content: center;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #e7e7e7;
+  flex-direction: column;
+  align-items: center;
 }

@@ -33,7 +33,8 @@ const Mission = () => {
           </thead>
           <tbody>
             {missions.map((x) => (
-              <Missions key={x.id} mission={{ ...x, missionName: x.missionName }} />))}
+              <Missions key={x.id} mission={x} />
+            ))}
           </tbody>
         </table>
       </div>

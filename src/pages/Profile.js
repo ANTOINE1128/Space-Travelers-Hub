@@ -1,24 +1,34 @@
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  getAllMissions,
+  getMissionStatus,
+  getActiveMissions,
+} from '../redux/missionSlice';
+import Profiles from '../components/profile/Profile';
 import './Profile.css';
+import ProfileRocket from '../components/ProfileRocket';
 
-export default function Profile() {
-  const { missions } = useSelector((state) => state.missions);
-
-  if (!missions) {
-    return <div>Loading...</div>;
-  }
-  const filter = missions.filter((mission) => mission.reserved === true);
-  return (
-    <div className="profile">
-      <div className="dimension">
-        <h2>My Missions</h2>
-        {filter.map((filtered) => (
-          <li className="mission-display" key={filtered.id}>
-            {filtered.missionName}
-          </li>
-        ))}
-
-      </div>
-    </div>
+const Profile = () => {
+  const dispatch = useDispatch();
+  const reservedMissions = useSelector(getAllMissions).filter(
+    (mission) => mission.reserved === true,
   );
-}
+  const missionStatus = useSelector(getMissionStatus);
+
+  useEffect(() => {
+    if (missionStatus === 'idle' || missionStatus === 'succeeded') {
+      dispatch(getActiveMissions());
+    }
+  });
+  return (
+    <>
+      <div className="grid-center container">
+        <Profiles missions={reservedMissions} />
+        <ProfileRocket />
+      </div>
+    </>
+  );
+};
+
+export default Profile;
