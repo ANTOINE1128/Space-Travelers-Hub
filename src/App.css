@@ -1,8 +1,8 @@
 :root {
   --white: #ffff;
   --yellow: yellow;
-  --red: red;
-  --black: black;
+  --red: rgb(84, 9, 9);
+  --black: rgba(0, 0, 0, 0.937);
 }
 
 * {

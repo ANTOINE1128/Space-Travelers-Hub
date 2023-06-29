@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../logo.png';
 
 const Navmenu = () => (
@@ -10,10 +10,10 @@ const Navmenu = () => (
         <h2 className="logo-title">Space Traveler&#39;s Hub</h2>
       </div>
       <ul className="d-flex-space g-10">
-        <li><Link to="/">Rockets</Link></li>
-        <li><Link to="/missions">Missions</Link></li>
+        <li><NavLink to="/">Rockets</NavLink></li>
+        <li><NavLink to="/missions">Missions</NavLink></li>
         |
-        <li><Link to="/Profile">My Profile</Link></li>
+        <li><NavLink to="/profile">My Profile</NavLink></li>
       </ul>
     </nav>
   </header>
