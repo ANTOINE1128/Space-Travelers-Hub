@@ -25,6 +25,8 @@ exports[`renders the navbar component snapshot 1`] = `
       >
         <li>
           <a
+            aria-current="page"
+            class="active"
             href="/"
           >
             Rockets
@@ -32,6 +34,7 @@ exports[`renders the navbar component snapshot 1`] = `
         </li>
         <li>
           <a
+            class=""
             href="/missions"
           >
             Missions
@@ -40,7 +43,8 @@ exports[`renders the navbar component snapshot 1`] = `
         |
         <li>
           <a
-            href="/Profile"
+            class=""
+            href="/profile"
           >
             My Profile
           </a>
