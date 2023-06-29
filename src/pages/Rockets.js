@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
 import Rocket from '../components/Rocket';
 import { fetchRockets } from '../redux/features/Rockets/RocketSlice';
 
 const Rockets = () => {
-  const rockets = useSelector((store) => store.rockets);
+  const rockets = useSelector(selectRockets);
   const dispatch = useDispatch();
   const lengthRock = rockets.rocket.length;
   useEffect(() => {
