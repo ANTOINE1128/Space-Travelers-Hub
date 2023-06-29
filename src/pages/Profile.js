@@ -1,29 +1,23 @@
-import { useSelector, useDispatch } from 'react-redux';
-import React, { useEffect } from 'react';
-import { fetchMissions } from '../redux/missionSlice';
+import { useSelector } from 'react-redux';
 
 export default function Profile() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
-
   const { missions } = useSelector((state) => state.missions);
 
   if (!missions) {
     return <div>Loading...</div>;
   }
-
+  const filter = missions.filter((mission) => mission.reserved === true);
+  console.log(filter);
   return (
     <div className="profile">
       <div className="dimension">
         <h2>My Missions</h2>
-        {missions.map((mission) => (
-          <p key={mission.id} className="profile-Missions">
-            {mission.missionName}
-          </p>
+        {filter.map((filtered) => (
+          <li className="mission-display" key={filtered.id}>
+            {filtered.missionName}
+          </li>
         ))}
+
       </div>
     </div>
   );
