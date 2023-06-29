@@ -1,14 +1,16 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets } from '../redux/features/Rockets/RocketSlice';
 import Rocket from '../components/Rocket';
+import { fetchRockets } from '../redux/features/Rockets/RocketSlice';
 
 const Rockets = () => {
   const rockets = useSelector((store) => store.rockets);
   const dispatch = useDispatch();
+  const lengthRock = rockets.rocket.length;
   useEffect(() => {
+    if (lengthRock > 0) return;
     dispatch(fetchRockets());
-  }, [dispatch]);
+  }, [dispatch, lengthRock]);
   return (
     <div className="container">
       {rockets.loading && <div>loading</div>}
@@ -26,6 +28,7 @@ const Rockets = () => {
             img={rocket.flickr_images}
             id={rocket.id}
             desc={rocket.description}
+            reserved={rocket.reserved}
           />
         ))
       ) : null}
