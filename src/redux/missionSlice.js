@@ -34,11 +34,12 @@ const missionSlice = createSlice({
     },
     getActiveMissions: (state) => state.missions.filter((mission) => mission.reserved === true),
     updateMission: (state, action) => {
-      const id = action.payload;
+      const { id, missionName } = action.payload;
       const missionIndex = state.missions.findIndex((x) => x.id === id);
       const mission = state.missions[missionIndex];
       const updatedMission = {
         ...mission,
+        missionName, // Update the missionName
         reserved: !mission.reserved,
       };
       const updatedMissions = [
