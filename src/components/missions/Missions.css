@@ -8,7 +8,7 @@ td,
 th {
   border: 1px solid hsl(180, 87%, 34%);
   text-align: left;
-  padding: 8px;
+  padding: 9px;
 }
 
 tbody tr:nth-child(even) {
@@ -37,7 +37,7 @@ p.member-status {
   background: aqua;
   padding: 5px;
   border: 1px solid aqua;
-  border-radius: 5px;
+  border-radius: 4.9px;
   font-weight: bold;
   display: flex;
   justify-content: center;
