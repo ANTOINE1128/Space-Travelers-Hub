@@ -13,7 +13,10 @@ const Missions = (mission) => {
   } = mission;
 
   const handleMission = () => {
-    dispatch(updateMission(id));
+    dispatch(updateMission({
+      id,
+      missionName,
+    }));
   };
 
   return (
