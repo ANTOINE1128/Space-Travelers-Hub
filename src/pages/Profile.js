@@ -20,7 +20,7 @@ export default function Profile() {
       <div className="dimension">
         <h2>My Missions</h2>
         {missions.map((mission) => (
-          <p key={mission.id} className="profile-rockets">
+          <p key={mission.id} className="profile-Missions">
             {mission.missionName}
           </p>
         ))}
