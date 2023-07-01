@@ -27,7 +27,7 @@
 ] <a name="about-project"></a>
 
 **[Space Travelers' Hub
-]**   Math magicians is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations, read a random math-related quote.
+]**  Introducing Space Traveller, the ultimate companion app for your interstellar adventures! Embark on a cosmic journey like never before with this innovative app designed to enhance your space exploration experience. Discover captivating information about celestial bodies, including planets, moons, stars, and galaxies, with stunning visuals and engaging content. Plan your next space mission with real-time updates on rocket launches, astronomical events, and space news. Explore interactive 3D models of spacecraft and celestial objects, allowing you to immerse yourself in the wonders of the universe. Whether you're a seasoned astronaut or a curious stargazer, Space Traveller is your gateway to the infinite wonders of space.
 
 ## 🛠 Built With <a name="built-with"></a>
 - **[React]**
