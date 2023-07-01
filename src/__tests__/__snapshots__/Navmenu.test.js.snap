@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the navbar component snapshot 1`] = `
+<DocumentFragment>
+  <header>
+    <nav
+      class="container d-flex-space"
+    >
+      <div
+        class="d-flex-space g-10"
+      >
+        <img
+          alt="logo"
+          class="logo-img"
+          src="logo.png"
+        />
+        <h2
+          class="logo-title"
+        >
+          Space Traveler's Hub
+        </h2>
+      </div>
+      <ul
+        class="d-flex-space g-10"
+      >
+        <li>
+          <a
+            aria-current="page"
+            class="active"
+            href="/"
+          >
+            Rockets
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/missions"
+          >
+            Missions
+          </a>
+        </li>
+        |
+        <li>
+          <a
+            class=""
+            href="/profile"
+          >
+            My Profile
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</DocumentFragment>
+`;
