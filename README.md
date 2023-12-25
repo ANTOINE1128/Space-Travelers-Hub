@@ -23,9 +23,9 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 [Space Travelers' Hub
+# 📖 [Space Travelers' Hub]
  <a name="about-project"></a>
-
+Space Traveler's Hub is a web application for a company that provides commercial and scientific space travel services. The application works with the real live data from the SpaceX API, allowing users to book rockets and join selected space missions.
 **[Space Travelers' Hub]**
 
 ## 🛠 Built With <a name="built-with"></a>
