@@ -24,10 +24,9 @@
 - [📝 License](#license)
 
 # 📖 [Space Travelers' Hub
-] <a name="about-project"></a>
+ <a name="about-project"></a>
 
-**[Space Travelers' Hub
-]**   Math magicians is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations, read a random math-related quote.
+**[Space Travelers' Hub]**
 
 ## 🛠 Built With <a name="built-with"></a>
 - **[React]**
@@ -55,7 +54,7 @@
 
 To set up the project, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/ANTOINE1128/React-Group-project.git`
+1. Clone the repository: `git clone https://github.com/ANTOINE1128/Space-Travelers-Hub
 2. Navigate to the project directory: `cd calculator`
 3. Install the dependencies: `npm install`
 
@@ -104,7 +103,7 @@ You can find the optimized and minified production-ready build files in the `bui
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/ANTOINE1128/React-Group-project/issues).
+Feel free to check the [issues page](https://github.com/ANTOINE1128/Space-Travelers-Hub/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,7 +116,7 @@ Give a ⭐️ if you like this project
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 - Thanks to the Microverse team for the great curriculum.
-- Thanks to the Code Reviewer(s) for the insightful feedbacks.
+- Thanks to the Code Reviewer(s) for the insightful feedback.
 - A great thanks to My morning session team, and standup team for their contributions.
 
 
